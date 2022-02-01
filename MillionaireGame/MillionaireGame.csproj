@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{154FE71E-E347-405F-9AA1-76D2AF2A5F2E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MillionaireGame</RootNamespace>
+    <AssemblyName>MillionaireGame</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AE.Net.Mail, Version=1.7.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AE.Net.Mail.1.7.10.0\lib\net45\AE.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=3.0.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.3.0.0\lib\net47\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.3.0.0\lib\net47\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenPop">
+      <HintPath>..\..\..\..\Downloads\OpenPop.NET 2.0.5\OpenPop.NET 2.0.5\binaries\signed (strong name)\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\app\client\HP\product\12.2.0\client_1\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>D:\app\client\HP\product\12.2.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddQuestion.Designer.cs">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Audience.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audience.Designer.cs">
+      <DependentUpon>Audience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CorrectAnswerMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorrectAnswerMessage.Designer.cs">
+      <DependentUpon>CorrectAnswerMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameEndMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameEndMessage.Designer.cs">
+      <DependentUpon>GameEndMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameMenu.Designer.cs">
+      <DependentUpon>GameMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructionMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructionMenu.Designer.cs">
+      <DependentUpon>InstructionMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageFriend.Designer.cs">
+      <DependentUpon>MessageFriend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerData.Designer.cs">
+      <DependentUpon>PlayerData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionData.Designer.cs">
+      <DependentUpon>QuestionData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectAudience.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectAudience.Designer.cs">
+      <DependentUpon>SelectAudience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WrongAnswerMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WrongAnswerMessage.Designer.cs">
+      <DependentUpon>WrongAnswerMessage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddQuestion.resx">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audience.resx">
+      <DependentUpon>Audience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorrectAnswerMessage.resx">
+      <DependentUpon>CorrectAnswerMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameEndMessage.resx">
+      <DependentUpon>GameEndMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameMenu.resx">
+      <DependentUpon>GameMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructionMenu.resx">
+      <DependentUpon>InstructionMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageFriend.resx">
+      <DependentUpon>MessageFriend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerData.resx">
+      <DependentUpon>PlayerData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuestionData.resx">
+      <DependentUpon>QuestionData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectAudience.resx">
+      <DependentUpon>SelectAudience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WrongAnswerMessage.resx">
+      <DependentUpon>WrongAnswerMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zxc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sa-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5050-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audience-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\millionaire.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correct %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_3_7461563440.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_5_7119960663.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audienceDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled_design__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gg-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkpoint %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear-png-31735.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear-png-317351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zxc1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
